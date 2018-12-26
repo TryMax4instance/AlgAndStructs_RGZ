@@ -24,7 +24,6 @@ namespace AlgAndStructs_RGZ_SuffixTree
         {
             chart1.Series[0].Points.Clear();
             var sw = new Stopwatch();
-            var blockLength = 500;
             var counter = 0;
             var i = 0;
             var fullTime = 0L;
@@ -95,8 +94,18 @@ namespace AlgAndStructs_RGZ_SuffixTree
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
-            var pos = _suffixTree.FindStr(SearchBox.Text);
+            var fullTime = 0L;
+            var sw = new Stopwatch();
 
+            sw.Start();
+            var pos = _suffixTree.FindStr(SearchBox.Text);
+            sw.Stop();
+
+            fullTime += sw.ElapsedTicks;
+            
+            TimeBox.Text = fullTime.ToString();
+
+            sw.Reset();
             pos.Sort();
 
             var sb = new StringBuilder();

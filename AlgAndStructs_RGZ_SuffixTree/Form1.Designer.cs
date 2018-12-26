@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.create = new System.Windows.Forms.Button();
@@ -49,22 +49,24 @@
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.SearchButton = new System.Windows.Forms.Button();
             this.ResultRTB = new System.Windows.Forms.RichTextBox();
+            this.TimeBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(501, 438);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -190,14 +192,14 @@
             // 
             // SearchBox
             // 
-            this.SearchBox.Location = new System.Drawing.Point(966, 133);
+            this.SearchBox.Location = new System.Drawing.Point(1000, 14);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(87, 20);
             this.SearchBox.TabIndex = 16;
             // 
             // SearchButton
             // 
-            this.SearchButton.Location = new System.Drawing.Point(850, 131);
+            this.SearchButton.Location = new System.Drawing.Point(884, 12);
             this.SearchButton.Name = "SearchButton";
             this.SearchButton.Size = new System.Drawing.Size(110, 23);
             this.SearchButton.TabIndex = 18;
@@ -208,17 +210,36 @@
             // 
             // ResultRTB
             // 
-            this.ResultRTB.Location = new System.Drawing.Point(850, 160);
+            this.ResultRTB.Location = new System.Drawing.Point(884, 75);
             this.ResultRTB.Name = "ResultRTB";
-            this.ResultRTB.Size = new System.Drawing.Size(325, 177);
+            this.ResultRTB.Size = new System.Drawing.Size(349, 363);
             this.ResultRTB.TabIndex = 19;
             this.ResultRTB.Text = "";
+            // 
+            // TimeBox
+            // 
+            this.TimeBox.Location = new System.Drawing.Point(993, 446);
+            this.TimeBox.Name = "TimeBox";
+            this.TimeBox.ReadOnly = true;
+            this.TimeBox.Size = new System.Drawing.Size(94, 20);
+            this.TimeBox.TabIndex = 21;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(890, 449);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(97, 13);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Общее время, мс";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1203, 483);
+            this.ClientSize = new System.Drawing.Size(1245, 483);
+            this.Controls.Add(this.TimeBox);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.ResultRTB);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.SearchBox);
@@ -265,6 +286,8 @@
         private System.Windows.Forms.TextBox SearchBox;
         private System.Windows.Forms.Button SearchButton;
         private System.Windows.Forms.RichTextBox ResultRTB;
+        private System.Windows.Forms.TextBox TimeBox;
+        private System.Windows.Forms.Label label6;
     }
 }
 
